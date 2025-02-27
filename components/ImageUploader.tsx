@@ -31,7 +31,7 @@ export default function ImageUploader() {
     }
   };
 
-  const { getRootProps, getInputProps } = useDropzone({ onDrop, accept: "image/*" });
+  const { getRootProps, getInputProps } = useDropzone({ onDrop, accept: { 'image/*': [] } });
 
   return (
     <div className="container mx-auto p-6 flex flex-col items-center">
