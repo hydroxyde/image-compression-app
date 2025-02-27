@@ -40,15 +40,15 @@ export default function ImageUploader() {
         <p className="text-gray-500">Drag & drop an image here, or click to select one</p>
       </div>
       {originalImage && (
-        <div className="mt-6 flex flex-col md:flex-row gap-6 items-center">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-center w-full max-w-4xl">
           <div className="text-center">
             <h3 className="text-lg font-semibold">Original Image ({(originalSize / 1024).toFixed(2)} KB)</h3>
-            <Image src={originalImage} alt="Original" width={300} height={300} className="rounded-lg shadow-md" />
+            <Image src={originalImage} alt="Original" width={300} height={300} className="rounded-lg shadow-md mx-auto" />
           </div>
           {compressedImage && (
             <div className="text-center">
               <h3 className="text-lg font-semibold">Compressed Image ({(compressedSize / 1024).toFixed(2)} KB)</h3>
-              <Image src={compressedImage} alt="Compressed" width={300} height={300} className="rounded-lg shadow-md" />
+              <Image src={compressedImage} alt="Compressed" width={300} height={300} className="rounded-lg shadow-md mx-auto" />
             </div>
           )}
         </div>
