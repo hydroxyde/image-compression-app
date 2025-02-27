@@ -35,9 +35,9 @@ export default function ImageUploader() {
 
   return (
     <div className="container mx-auto p-6 flex flex-col items-center">
-      <div {...getRootProps()} className="w-full max-w-lg p-6 border-2 border-dashed border-gray-300 rounded-lg text-center cursor-pointer hover:border-blue-500 transition">
+      <div {...getRootProps()} className="group w-full max-w-lg p-6 border-2 border-gray-300 rounded-lg text-center cursor-pointer transition transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-[#8E2DE2] hover:to-[#4A00E0] hover:bg-opacity-80">
         <input {...getInputProps()} />
-        <p className="text-gray-500">Drag & drop an image here, or click to select one</p>
+        <p className="text-gray-500 group-hover:text-white transition">Drag & drop an image here, or click to select one</p>
       </div>
       {originalImage && (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-center w-full max-w-4xl">
