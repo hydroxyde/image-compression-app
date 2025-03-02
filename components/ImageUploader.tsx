@@ -36,7 +36,14 @@ export default function ImageUploader() {
   };
 
   const compressImage = async (imageFile: FileWithSize) => {
-    const options = { maxSizeMB: 1, maxWidthOrHeight: 800, useWebWorker: true };
+    const options = {
+      maxSizeMB: 1.5,
+      maxWidthOrHeight: 1200,
+      useWebWorker: true,
+      initialQuality: 0.8,
+      alwaysKeepResolution: true
+    };
+
     try {
       const compressedFile = await imageCompression(imageFile, options);
       setCompressedSize(compressedFile.size);
