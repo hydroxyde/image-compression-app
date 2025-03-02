@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@import "tailwindcss/preflight";
-@tailwind utilities;
+@variant dark (&:where(.dark, .dark *));
 
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 @layer base {
   :root {
     --background: #ffffff;
@@ -21,7 +21,5 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Helvetica Neue', Helvetica, Arial,  sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
