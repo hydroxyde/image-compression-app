@@ -15,3 +15,6 @@ Image compression library used for this project can be found [here](https://www.
 - In the current version, only 1 image can be uploaded at a time. Haven't tested other limitations such as big image size. 
 
 - There is no usage of any DB, could add counter for the total downloads. 
+
+## Live Demo
+[here](https://image-compression-app-gamma.vercel.app/)
